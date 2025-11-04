@@ -1,0 +1,30 @@
+[
+    {
+        "label": "Mon",
+        "mood": 52
+    },
+    {
+        "label": "Tue",
+        "mood": 50
+    },
+    {
+        "label": "Wed",
+        "mood": 54
+    },
+    {
+        "label": "Thur",
+        "mood": 33
+    },
+    {
+        "label": "Fri",
+        "mood": 63
+    },
+    {
+        "label": "Sat",
+        "mood": 97
+    },
+    {
+        "label": "Sun",
+        "mood": 93
+    }
+]
