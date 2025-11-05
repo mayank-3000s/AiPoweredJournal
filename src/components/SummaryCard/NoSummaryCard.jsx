@@ -1,6 +1,7 @@
+import { lazy } from 'react';
 import {useNavigate} from 'react-router-dom'
 
-export const NoSummaryCard = () => {
+const NoSummaryCard = () => {
     const navigate = useNavigate();
     const handleAdd = ()=>{
         navigate('/entries')
@@ -49,3 +50,5 @@ export const NoSummaryCard = () => {
     </>
   );
 };
+
+export default NoSummaryCard;

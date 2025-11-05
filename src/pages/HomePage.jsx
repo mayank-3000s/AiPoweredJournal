@@ -22,6 +22,7 @@ export const HomePage = () => {
       <section className="relative text-center py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-1">
           <img
+            loading="lazy"
             alt="Abstract background"
             className="w-full h-full object-cover"
             src="/landingpage.jpg"

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { profile, updateProfile } from "../api/UserAccountApi";
 import { useNavigate } from "react-router-dom";
+import { MdModeEdit } from "react-icons/md";
 
 export const UpdateProfilePage = ({token, setToken, userinfo, setUserInfo}) => {
     const[password, setPassword] = useState("");
@@ -57,15 +58,11 @@ export const UpdateProfilePage = ({token, setToken, userinfo, setUserInfo}) => {
                 <div className="flex flex-col items-center gap-4">
                   <h1 className="text-3xl font-bold text-gray-900">Update Profile</h1>
                   <div className="relative">
-                    <div
-                      className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-32"
-                      style={{
-                        backgroundImage:
-                          'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgcsrfyBjWf81Px1KhvU1VgSp73fJI0X9FOBTw3ctvIhzIgrN35FoQtyVu7NIRsVSHEL4rszsR6WhIkwyEmrAAD9mYnQOEBKv8Hto2TOlIOESP05EAyIUkmD5fgZP2pV1qTiPHyz9y7MUC9QRzm1P7gQ74BXXbL3bm3IRB_GPPlr3FwWE50hLdEvdNlHiwk6_VYmKIWjGoTOcFhmtNasMnStAmp9zRVR3sQTvWRhjIP2dMgVCGBaGPtA-o22-SJEx8r0RLMMYWbUo")',
-                      }}
-                    ></div>
+                    <div className="bg-center bg-no-repeat overflow-hidden aspect-square bg-cover rounded-full size-32">
+                      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgcsrfyBjWf81Px1KhvU1VgSp73fJI0X9FOBTw3ctvIhzIgrN35FoQtyVu7NIRsVSHEL4rszsR6WhIkwyEmrAAD9mYnQOEBKv8Hto2TOlIOESP05EAyIUkmD5fgZP2pV1qTiPHyz9y7MUC9QRzm1P7gQ74BXXbL3bm3IRB_GPPlr3FwWE50hLdEvdNlHiwk6_VYmKIWjGoTOcFhmtNasMnStAmp9zRVR3sQTvWRhjIP2dMgVCGBaGPtA-o22-SJEx8r0RLMMYWbUo" alt="No profile" loading="lazy"  />
+                    </div>
                     <button className="absolute bottom-0 right-0 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-indigo-600 text-white shadow-md transition-transform hover:scale-110">
-                      <span className="material-symbols-outlined"></span>
+                      <MdModeEdit />
                     </button>
                   </div>
                 </div>

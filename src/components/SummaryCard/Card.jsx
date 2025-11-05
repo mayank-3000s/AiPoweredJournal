@@ -1,5 +1,10 @@
-import { useEffect, useState } from "react"
-import { NoSummaryCard } from "./NoSummaryCard"
+import { lazy, Suspense, useEffect, useState } from "react" 
+import { LoadingPage } from "../../pages/LoadingPage";
+
+const NoSummaryCard = lazy(
+  ()=>import("./NoSummaryCard")
+);
+// import { NoSummaryCard } from "./NoSummaryCard"
 
 export const Card = ({summary, week, setWeek})=>{
     const [isAvail, setIsAvail] = useState(false)
@@ -14,7 +19,11 @@ export const Card = ({summary, week, setWeek})=>{
         setWeek(sel_week-1)
     }
 
-    if(!isAvail) return <><NoSummaryCard/></>
+    if(!isAvail) return (
+      <Suspense fallback={<LoadingPage />}>
+        <NoSummaryCard />
+      </Suspense>
+    )
     return(
       <>
       <select name="ChooseWeek" id="week" className="bg-white h-10 w-28 rounded-lg shadow-md px-2

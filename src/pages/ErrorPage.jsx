@@ -12,7 +12,7 @@ const ErrorPage = () => {
         alt="404 Error"
         className="w-[500px] max-w-full rounded-2xl shadow-2xl"
       />
-      <h1 className="text-black text-3xl mt-6 font-bold">Oops! Page Not Found</h1>
+      <h1 className="text-black text-3xl mt-6 font-bold">Something went Wrong !!</h1>
       <p className="text-gray-400 mt-2 text-lg text-center">
         The page you are looking for doesn't exist or has been moved.
       </p>

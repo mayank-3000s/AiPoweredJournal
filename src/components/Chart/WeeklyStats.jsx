@@ -15,7 +15,7 @@ export const WeeklyStats = ({summary, week})=>{
     const [day, setDay] = useState({
         'Mon' : 0,
         'Tues' : 0,
-        'Wednes' : 0,
+        'We' : 0,
         'Thurs': 0,
         'Fri' : 0,
         'Satur' : 0,
@@ -29,7 +29,7 @@ export const WeeklyStats = ({summary, week})=>{
           const counts = {
             Mon: 0,
             Tues: 0,
-            Wednes: 0,
+            We: 0,
             Thurs: 0,
             Fri: 0,
             Satur: 0,
@@ -44,7 +44,6 @@ export const WeeklyStats = ({summary, week})=>{
               }
             }
           });
-      
           setDay(counts); 
   }
 }, [summary, week]);
